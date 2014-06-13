@@ -1,16 +1,131 @@
-<!-- Home Page of MeetUp-->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>MeetUp</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MeetUp - Home</title>
+  <!-- Bootstrap Reference-->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="bootstrap/css/navbar-fixed-top.css" rel="stylesheet">
 </head>
 
+<style type="text/css">
+.table-bordered{
+  border-top: 0px;
+  border-left: 0px;  
+  border-right: 0px;
 
+}
+.table-bordered > thead > tr > th{
+  border: 0px;
+  border-bottom: 2px solid #ddd;
+}
+.table{
+  width: 100%;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  width: 20px;
+}
+th{
+  text-align: center;
+}
+
+
+</style>
 <body>
-	<nav>
-		<h3>MeetUp</h3>
-		<h4>Home</h4>
-	</nav>
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">MeetUp</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">How to use</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-right navbar-search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div><!--Search-->
+            <button type="submit" class="btn btn-info">Sign In</button><!--Need modify!!!-->
+            <!-- <a class="btn btn-lg btn-primary" href="http://getbootstrap.com/components/#navbar" role="button">View navbar docs »</a>-->
+          </form>
+        </ul>
+      </div><!--collapse-->
+    </div><!--nav container-->
+  </div><!--nav-->
+
+  <div class="container">
+    <div class="jumbotron">
+      <h2 style="text-align:center">Calendar</h2>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednsday</th>
+            <th>Thurseday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <button type="button" class="btn btn-default" data-toggle="popover" title="A Title" data-content="Content" role="button" >Add a Meeting</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-default" data-toggle="popover" title="A Title" data-content="Content" role="button" >Add a Meeting</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-default" data-toggle="popover" title="A Title" data-content="Content" role="button" >Add a Meeting</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-default" data-toggle="popover" title="A Title" data-content="Content" role="button" >Add a Meeting</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-default" data-toggle="popover" title="A Title" data-content="Content" role="button" >Add a Meeting</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-default" data-toggle="popover" title="A Title" data-content="Content" role="button" >Add a Meeting</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-default" data-toggle="popover" title="A Title" data-content="Content" role="button" >Add a Meeting</button>
+            </td>
+          </tr>
+
+          <tr></tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div><!--body container-->
+
+  <script src="jquery.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  <script>
+  $(function (){ 
+    $("button").popover();
+  });
+  </script>
 
 </body>
